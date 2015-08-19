@@ -2,11 +2,18 @@
 <html>
 <head>
   <title>Bateman Rails</title>
+  <meta name='<%= @meta['name'] %>' content='<%= @meta['content'] %>'>
+  <% @links.each do |link| %>
+    <link rel='stylesheet' href='<%= link['href'] %>'>
+  <% end %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% @scripts.each do |script| %>
+    <script src='<%= script['src'] %>'></script>
+  <% end %>
 
 <%= yield %>
 
