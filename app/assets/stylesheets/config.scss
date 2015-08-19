@@ -1,0 +1,15 @@
+// $grid-unit-size is the basis for layout alignment, padding, margins, etc.
+// throughout the CSS codebase.
+$grid-unit-size: 20px;
+
+// The gs() function allows us to specify sizes in terms of grid units
+// throughout the CSS codebase.
+//
+// USAGE
+// =====
+// .thing {
+//   padding: g() g(.5); // equivalent to padding: 20px 10px;
+// }
+@function g($n: 1) {
+  @return $n * $grid-unit-size;
+}
