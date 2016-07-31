@@ -14,18 +14,18 @@ body {
 
 .placeholder {
   border: solid 2px palette('teal');
-  margin-left: g(1);
+  margin-top: g(2);
   min-height: g(10);
   padding: 5px;
   position: relative;
 
-  &::after {
+  &::before {
     background: palette('teal');
     color: palette('white');
-    content: 'Ember Island - #' attr(id);
+    content: 'Island - #' attr(id);
     padding: 5px 10px;
     position: absolute;
-    right: 0;
-    top: 0;
+    left: -2px;
+    top: -29px;
   }
 }
