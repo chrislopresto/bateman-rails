@@ -1,0 +1,23 @@
+<h1>Islands of Richness Demo</h1>
+
+<p>
+  It's <%= Time.now %>. Do you know where your children are?
+</p>
+
+<div class="placeholder" id="placeholder-1"></div>
+
+<p>
+  And now for something completely different...
+</p>
+
+<div class="placeholder" id="placeholder-2"></div>
+
+<h2>Redis</h2>
+
+<div class="thing">
+  <%= @thing %>
+</div>
+
+<input class="thing-value" placeholder="17" type="text" name="name" value="<%= @thing %>">
+
+<button class="create-thing" onclick="createThing()" type="button" name="button">Create Thing</button>

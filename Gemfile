@@ -25,7 +25,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Log and serve static assets on heroku
 gem 'rails_12factor', group: :production
-gem 'slim'
 gem 'redis-rails'
 
 # Use ActiveModel has_secure_password
