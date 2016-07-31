@@ -16,4 +16,16 @@ body {
   border: solid 2px palette('teal');
   margin-left: g(1);
   min-height: g(10);
+  padding: 5px;
+  position: relative;
+
+  &::after {
+    background: palette('teal');
+    color: palette('white');
+    content: 'Ember Island - #' attr(id);
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
