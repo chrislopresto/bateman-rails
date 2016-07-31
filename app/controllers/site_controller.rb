@@ -14,7 +14,7 @@ class SiteController < ApplicationController
       manifest_id = $redis.get(current_manifest_key)
     end
 
-    raise "Invalid manifest_id #{manifest_id}" unless manifest_id =~ /\A(dev|test|[0-9a-f]{32})\Z/i
+    raise "Invalid manifest_id #{manifest_id}" unless manifest_id =~ /\A(development|test|[0-9a-f]{32})\Z/i
 
     index_key = "#{app_name}:index:#{manifest_id}"
 
