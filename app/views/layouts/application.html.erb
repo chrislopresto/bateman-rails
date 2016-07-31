@@ -2,21 +2,15 @@
 <html>
 <head>
   <title>Bateman Rails</title>
-  <meta name='<%= @meta['name'] %>' content='<%= @meta['content'] %>'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <% @links.each do |link| %>
-    <link rel='stylesheet' href='<%= link['href'] %>'>
-  <% end %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= ember_app_meta_tags %>
+  <%= ember_app_link_tags %>
 </head>
 <body>
-  <% @scripts.each do |script| %>
-    <script src='<%= script['src'] %>'></script>
-  <% end %>
-
-<%= yield %>
-
+  <%= yield %>
+  <%= ember_app_script_tags %>
 </body>
 </html>

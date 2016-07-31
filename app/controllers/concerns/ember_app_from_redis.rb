@@ -25,9 +25,9 @@ module EmberAppFromRedis
     raise "No ember app name specified." unless ember_app_name.present?
     raise "Invalid ember app manifest_id #{manifest_id}" unless manifest_id =~ MANIFEST_ID_PATTERN
 
-    @meta = index_json['meta'].first
-    @links = index_json['link']
-    @scripts = index_json['script']
+    @ember_app_metas = index_json['meta']
+    @ember_app_links = index_json['link']
+    @ember_app_scripts = index_json['script']
   end
 
   def manifest_id
