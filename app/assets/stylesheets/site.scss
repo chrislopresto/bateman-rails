@@ -12,7 +12,15 @@ body {
   font-size: 15px;
 }
 
-.placeholder {
+.DemoContainer {
+  border: dotted 2px rebeccapurple;
+  border-radius: 6px;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.RailsIsland {
   background-color: white;
   border: solid 2px palette('teal');
   margin-top: g(2);
@@ -23,7 +31,7 @@ body {
   &::before {
     background: palette('teal');
     color: palette('white');
-    content: 'Island - #' attr(id);
+    content: 'Rails Island - #' attr(id);
     padding: 5px 10px;
     position: absolute;
     left: -2px;
