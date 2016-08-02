@@ -4,16 +4,13 @@ module EmberAppFromRedis
   MANIFEST_ID_PATTERN = /\A(development|test|[0-9a-f]{32})\Z/i
 
   module ClassMethods
-    attr_reader :ember_app_name
-
-    private
-
-    def ember_app(ember_app_name)
-      @ember_app_name = ember_app_name
+    def ember_app(name)
+      self.ember_app_name = name
     end
   end
 
   included do
+    class_attribute :ember_app_name
     before_filter :setup_app
   end
 
